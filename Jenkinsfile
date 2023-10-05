@@ -1,18 +1,11 @@
-        echo "building"
-        sleep 10
-      }
-    }
-    stage('Test') {
-      steps {
-        echo "testing"
-        sleep 30
-      }
-    }
-    stage('Deploy') {
-      steps {
-        echo "deploying"
-        stageMessage "sample stage message"
-      }
-    }
-  }
+pipeline {
+	agent{label "linux"}
+	stages{
+	 stage('Hello'){
+		steps{
+			echo "hello from Jenkinsfile"
+			}
+		}
+	}
+}
 
